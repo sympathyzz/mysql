@@ -1,0 +1,13 @@
+create DATABASE student_examination_sys;
+use student_examination_sys;
+create table student(id int(3) ZEROFILL,`name` VARCHAR(255),age int(2),sex VARCHAR(255),PRIMARY KEY (id));
+insert into student values(001,'zhangsan',18,'male');
+insert into student values(002,'lisi',20,'female');
+create table subject(id int(4),subject VARCHAR(255),teacher varchar(255),description VARCHAR(255),PRIMARY KEY (id));
+insert into subject values(1001,'Chinese','Mr.Wang','the exam is easy');
+insert into subject values(1002,'Math','Miss Liu','the exam is difficult');
+create table score(id int(2) AUTO_INCREMENT,student_id int(3) ZEROFILL,subject_id int(4),score float(3),PRIMARY KEY (id));
+insert into score values(1,001,1001,80);
+insert into score values(2,002,1002,60);
+insert into score values(3,001,1001,70);
+insert into score values(4,002,1002,60.5);
